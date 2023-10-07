@@ -1,0 +1,36 @@
+<!-- public/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collaborative Canvas</title>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.0/socket.io.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.12.11/paper-full.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js"></script>
+</head>
+
+<body>
+    <!-- <canvas id="canvas" resize></canvas> -->
+    <canvas id="myCanvas">
+    </canvas>
+    <div id="colorBox" style="width: 50px; height: 50px;"></div>
+
+    <div id="colorPalette">
+        <div class="colorOption" style="background-color: red;" data-color="red"></div>
+        <div class="colorOption" style="background-color: blue;" data-color="blue"></div>
+        <div class="colorOption" style="background-color: green;" data-color="green"></div>
+        <div class="colorOption" style="background-color: yellow;" data-color="yellow"></div>
+        <div class="colorOption" style="background-color: darkorange;" data-color="darkorange"></div>
+
+    </div>
+    <p id="userCount">Users connected: 0</p>
+    <p id="userColor">Your color: <span></span></p>
+    <button id="clearButton">Clear</button>
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    height: 100%;
+    cursor: auto;
+}
+
+#myCanvas {
+    border: 1px dashed black;
+    padding: 0;
+    margin: auto;
+    display: block;
+    width: 800px;
+    height: 600px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#colorBox {
+    position: absolute;
+    top: 10px; 
+    left: 10px; 
+    z-index: 1; 
+}
+
+#colorPalette {
+    position: absolute;
+    top: 50px; 
+    right: 350px; 
+    z-index: 1;
+}
+
+.colorOption {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+}
+
+
+#userCount{
+    position: absolute;
+    left: 330px; 
+    bottom: 20px; 
+    z-index: 1; 
+    font-family: 'Courier New', monospace;
+    font-size: 16px;
+    color: #333; 
+    font-weight: bold;
+}
+
+#userColor {
+    position: absolute;
+    right: 330px; 
+    bottom: 20px; 
+    z-index: 1; 
+    font-family: 'Courier New', monospace;
+    font-size: 16px;
+    color: #333; 
+    font-weight: bold;
+}
+
+
+
+#clearButton {
+    position: absolute;
+    top: 140px; 
+    left: 10px; 
+    z-index: 1;
+}
+
+
+#clearButton {
+    top: 50px;
+    left: 330px;
+}
