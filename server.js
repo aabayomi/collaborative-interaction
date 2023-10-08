@@ -1,13 +1,23 @@
-const express = require('express');
-const http = require('http');
-const socketIo = require('socket.io');
+// const express = require('express');
+// const http = require('http');
+// const socketIo = require('socket.io');
 
+// const app = express();
+// const server = http.createServer(app);
+// const io = socketIo(server);
+
+
+const express = require('express');
 const app = express();
-const server = http.createServer(app);
-const io = socketIo(server);
+const http = require('http').Server(app);
+const io = require('socket.io')(http);
+const port = process.env.PORT || 3001;
+// const PORT = process.env.PORT || 3001;
 
 // Serve static files
-app.use(express.static('public'));
+// app.use(express.static('public'));
+app.use(express.static(__dirname + '/public'));
+
 const colors = ["red", "blue", "green", "yellow", "purple", "orange"]; 
 let userCount = 0;
 
@@ -47,7 +57,8 @@ io.on('connection', (socket) => {
 
 
 // Start the server.
-const PORT = 3000;
-server.listen(PORT, () => {
-    console.log(`Server is running on http://localhost:${PORT}`);
-});
+
+http.listen(port, () => console.log('listening on port ' + port));
+// server.listen(PORT, () => {
+//     console.log(`Server is running on http://localhost:${PORT}`);
+// });
